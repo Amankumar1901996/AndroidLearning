@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.mypracticeapplication">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,18 +11,26 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyPracticeApplication">
         <activity
-            android:name=".EggTimer"
-            android:exported="true" >
+            android:name=".DownloadingContent"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
-            android:name=".ListViewDemo"
+            android:name=".EggTimer"
             android:exported="true"></activity>
+        <activity
+            android:name=".ListViewDemo"
+            android:exported="true" />
         <activity
             android:name=".GridLayout"
             android:exported="true" />
         <activity
             android:name=".AudioVideo"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".CurrencyConverter"
             android:exported="true" />
@@ -29,11 +38,6 @@
             android:name=".ImageActivity"
             android:exported="true" />
         <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 
